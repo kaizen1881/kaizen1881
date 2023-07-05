@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+       .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input, button {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 9px;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="signup-form" onsubmit="return false;">
+            <h2>Kayıt Ol</h2>
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="E-mail Adress">
+            <input type="password" placeholder="Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+       document.querySelector('.signup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Sucsess registarion ');
+});
+
+    </script>
+</body>
+</html>
+
